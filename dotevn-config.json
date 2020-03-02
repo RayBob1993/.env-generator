@@ -1,0 +1,32 @@
+[
+	{
+		"name": "APP_NAME",
+		"type": "input",
+		"value": "project-name"
+	},
+	{
+		"name": "APP_PORT",
+		"type": "number",
+		"value": 3000
+	},
+	{
+		"name": "API_PORT",
+		"type": "number",
+		"value": 443
+	},
+	{
+		"name": "NODE_ENV",
+		"type": "input",
+		"value": "production"
+	},
+	{
+		"name": "API_HOST",
+		"type": "input",
+		"value": "test-api-host.ru"
+	},
+	{
+		"name": "API_PREFIX",
+		"type": "input",
+		"value": "/api"
+	}
+]

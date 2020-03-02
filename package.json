@@ -1,0 +1,30 @@
+{
+  "name": "dotenv-generator",
+  "version": "1.0.0",
+  "description": "Генератор .evn файла",
+  "main": "index.js",
+  "bin": {
+    "dotenv-check": "src/cli.js"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "files": [
+    "src/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RayBob1993/.env-generator.git"
+  },
+  "homepage": "https://github.com/RayBob1993/.env-generator",
+  "bugs": {
+    "url": "https://github.com/RayBob1993/.env-generator/issues"
+  },
+  "author": "Turkov Dmitry <dimaxfallenangel@yandex.ru>",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "sao": "^1.7.0"
+  }
+}
