@@ -123,11 +123,15 @@ async function validate (rules, currentDotenv) {
  * @returns { object } - Объект с аргументами
  */
 function parseArguments (data) {
-  if (
-  	!data &&
-	  !Array.isArray(data) &&
-  	!data.length
-  ) {
+  if (!data) {
+    return null
+  }
+
+  if (!Array.isArray(data)) {
+    return null
+  }
+
+  if (!data.length) {
     return null
   }
 
@@ -149,7 +153,3 @@ module.exports = {
 	exit,
   parseArguments,
 }
-
-
-
-
