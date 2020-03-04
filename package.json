@@ -2,9 +2,8 @@
   "name": "dotenv-generator",
   "version": "1.0.0",
   "description": "Генератор .evn файла",
-  "main": "index.js",
   "bin": {
-    "dotenv-check": "src/cli.js"
+    "dotenv": "src/cli.js"
   },
   "engines": {
     "node": ">= 12.0.0"
