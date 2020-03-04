@@ -37,7 +37,7 @@
 			})
 
 			try {
-				app.run()
+				await app.run()
 			} catch (error) {
 				console.trace(error)
 
