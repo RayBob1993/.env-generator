@@ -79,14 +79,18 @@ async function getRules (outDir, filename = 'dotevn-config.json') {
 /**
  * Валидация опций .env файла на основе правил
  *
- * @param { object } rules - Объект с правилами
+ * @param { array } rules - Массив с правилами
  * @param { object } currentDotenv - Объект с текущими правилами .env файла
  * @example
- * rules - { APP_NAME: 'name' }
+ * rules - [{ APP_NAME: 'name' }]
  * currentDotenv - { APP_NAME: 'name' }
  * @returns { boolean }
  */
 async function validate (rules, currentDotenv) {
+  if (!currentDotenv) {
+    return false
+  }
+  
 	const validation = rules.map(item => {
 		const { name } = item
 
@@ -106,11 +110,18 @@ async function validate (rules, currentDotenv) {
 	const validationHasErrors = validation.filter(item => item.status === false)
 
 	if (!validationHasErrors.length) {
+    validation.forEach(item => {
+      console.log(item.message)
+    })
+
+    console.log('Валидация .env прошла успешно!')
+
 		return true
 	} else {
 		validationHasErrors.forEach(error => {
 			console.error(error.message)
 		})
+    
     return false
 	}
 }
